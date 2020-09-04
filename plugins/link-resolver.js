@@ -21,6 +21,9 @@ export default function(doc) {
   if (doc.type === "post") {
     return "/post/" + doc.uid;
   }
+  if (doc.type === "photo_page") {
+    return "/photos" + doc.uid;
+  }
 
   return "/not-found";
 }
