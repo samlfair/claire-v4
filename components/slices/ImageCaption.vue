@@ -21,8 +21,6 @@ export default {
 <style scoped>
 .banner {
   /* Add media query */
-  width: 120%;
-  margin-left: -10%;
   max-width: 95vw;
   background-size: contain;
   background-position: right;
@@ -31,5 +29,18 @@ export default {
   display: flex;
   align-items: center;
   font-size: 2em;
+  color: black;
+  font-family: Gotu, serif;
+  padding-right: 20px;
+  margin: 20px;
+  padding: 20px;
+}
+
+@media (min-width: 900px) {
+  .banner {
+    margin: 70px 0px 70px calc(-10%);
+    width: 120%;
+    padding-right: 200px;
+  }
 }
 </style>
