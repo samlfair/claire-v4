@@ -43,26 +43,25 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [],
+  buildModules: ["@nuxtjs/prismic"],
   /*
    ** Nuxt.js modules
    */
   modules: [
-    "@nuxtjs/prismic",
-    [
-      "@nuxtjs/prismic",
-      {
-        endpoint: "",
-        apiOptions: {
-          routes: [
-            {
-              type: "page",
-              path: "/:uid"
-            }
-          ]
-        }
-      }
-    ]
+    // [
+    //   "@nuxtjs/prismic",
+    //   {
+    //     endpoint: "",
+    //     apiOptions: {
+    //       routes: [
+    //         {
+    //           type: "page",
+    //           path: "/:uid"
+    //         }
+    //       ]
+    //     }
+    //   }
+    // ]
   ],
   prismic: {
     endpoint: "https://claire.cdn.prismic.io/api/v2",
