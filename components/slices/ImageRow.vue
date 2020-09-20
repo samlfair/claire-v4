@@ -12,8 +12,8 @@
 export default {
   name: "Image Row",
   props: {
-    slice: Object
-  }
+    slice: Object,
+  },
 };
 </script>
 
@@ -26,5 +26,14 @@ export default {
 
 img {
   max-width: 100%;
+}
+
+.ratio {
+  margin-left: 3px;
+  /* overflow: hidden; */
+}
+
+.ratio:first-child {
+  margin-left: 0;
 }
 </style>
