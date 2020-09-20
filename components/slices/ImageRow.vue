@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "Image Row",
+  name: "ImageRow",
   props: {
     slice: Object,
   },

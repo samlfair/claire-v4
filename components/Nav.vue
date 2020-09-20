@@ -1,9 +1,11 @@
 <template>
   <nav>
-    <span class="site-title">{{ $prismic.asText(config.site_title) }}</span>
+    <nuxt-link to="/">
+      <span class="site-title">{{ $prismic.asText(config.site_title) }}</span>
+    </nuxt-link>
     <ul class="menu">
       <li v-for="item in config.nav_menu">
-        {{ $prismic.asText(item.menu_item_label) }}
+        <prismic-link :field="item.menu_item_link">{{ $prismic.asText(item.menu_item_label) }}</prismic-link>
       </li>
     </ul>
   </nav>
@@ -13,8 +15,8 @@
 export default {
   name: "Nav",
   props: {
-    config: Object
-  }
+    config: Object,
+  },
 };
 </script>
 
@@ -39,5 +41,14 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   font-weight: 100;
+}
+
+li {
+  margin-left: 30px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 </style>
