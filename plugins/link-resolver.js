@@ -22,7 +22,7 @@ export default function(doc) {
     return "/post/" + doc.uid;
   }
   if (doc.type === "photo_page") {
-    return "/photos" + doc.uid;
+    return "/" + doc.uid;
   }
 
   return "/not-found";

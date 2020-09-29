@@ -47,22 +47,8 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    // [
-    //   "@nuxtjs/prismic",
-    //   {
-    //     endpoint: "",
-    //     apiOptions: {
-    //       routes: [
-    //         {
-    //           type: "page",
-    //           path: "/:uid"
-    //         }
-    //       ]
-    //     }
-    //   }
-    // ]
-  ],
+  modules: [],
+
   prismic: {
     endpoint: "https://claire.cdn.prismic.io/api/v2",
     linkResolver: "@/plugins/link-resolver",

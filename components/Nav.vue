@@ -3,7 +3,9 @@
     <span class="site-title">{{ $prismic.asText(config.site_title) }}</span>
     <ul class="menu">
       <li v-for="item in config.nav_menu">
-        {{ $prismic.asText(item.menu_item_label) }}
+        <prismic-link :field="item.menu_item_link">
+          {{ $prismic.asText(item.menu_item_label) }}
+        </prismic-link>
       </li>
     </ul>
   </nav>
@@ -39,5 +41,14 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   font-weight: 100;
+}
+
+li {
+  margin-left: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 </style>
