@@ -15,13 +15,13 @@ export default {
       {
         rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@100;300;400&display=swap"
-      }
-    ]
+          "https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@100;300;400&display=swap",
+      },
+    ],
   },
-  data: function() {
+  data: function () {
     return {
-      config: {}
+      config: {},
     };
   },
   async fetch() {
@@ -31,7 +31,7 @@ export default {
     } catch (e) {
       error({ statsCode: 404, message: e });
     }
-  }
+  },
 };
 </script>
 
@@ -39,6 +39,7 @@ export default {
 .container {
   max-width: 700px;
   margin: auto;
+  margin-bottom: 200px;
 }
 
 html {

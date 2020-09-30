@@ -13,13 +13,10 @@ export default function(doc) {
     return "/";
   }
   if (doc.type === "page") {
-    return "/page/" + doc.uid;
+    return "/" + doc.uid;
   }
-  if (doc.type === "author") {
-    return "/author/" + doc.uid;
-  }
-  if (doc.type === "post") {
-    return "/post/" + doc.uid;
+  if (doc.type === "portfolio_item") {
+    return "/portfolio/" + doc.uid;
   }
   if (doc.type === "photo_page") {
     return "/" + doc.uid;

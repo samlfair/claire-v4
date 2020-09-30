@@ -1,6 +1,8 @@
 <template>
   <nav>
-    <span class="site-title">{{ $prismic.asText(config.site_title) }}</span>
+    <nuxt-link to="/">
+      <span class="site-title">{{ $prismic.asText(config.site_title) }}</span>
+    </nuxt-link>
     <ul class="menu">
       <li v-for="item in config.nav_menu">
         <prismic-link :field="item.menu_item_link">
