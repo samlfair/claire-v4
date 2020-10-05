@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SliceZone :slices="page.data.body" />
+    <SliceZone :slices="portfolioItem.data.body" />
   </div>
 </template>
 
@@ -8,14 +8,17 @@
 import SliceZone from "~/components/SliceZone";
 
 export default {
-  name: "Page",
+  name: "PortfolioItem",
   components: {
     SliceZone
   },
   async asyncData({ $prismic, params, error }) {
     try {
-      const page = await $prismic.api.getByUID("page", params.uid);
-      return { page };
+      const portfolioItem = await $prismic.api.getByUID(
+        "portfolio_item",
+        params.uid
+      );
+      return { portfolioItem };
     } catch (e) {
       error({ statsCode: 404, message: e });
     }

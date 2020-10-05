@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="container">
     <nuxt-link to="/">
       <span class="site-title">{{ $prismic.asText(config.site_title) }}</span>
     </nuxt-link>
@@ -46,7 +46,7 @@ ul {
 }
 
 li {
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 a {

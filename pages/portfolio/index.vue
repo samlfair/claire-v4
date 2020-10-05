@@ -14,7 +14,7 @@ export default {
   },
   async asyncData({ $prismic, params, error }) {
     try {
-      const page = await $prismic.api.getByUID("page", params.uid);
+      const page = await $prismic.api.getByUID("page", "portfolio");
       return { page };
     } catch (e) {
       error({ statsCode: 404, message: e });

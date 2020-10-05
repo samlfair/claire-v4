@@ -1,27 +1,38 @@
 <template>
-  <div class="container">
+  <div class="body">
     <Nav :config="config" />
-    <Nuxt />
+    <main id="main">
+      <Nuxt />
+    </main>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Nav from "~/components/Nav";
+import Footer from "~/components/Footer";
 
 export default {
   name: "Layout",
-  head: {
-    link: [
-      {
-        rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@100;300;400&display=swap",
-      },
-    ],
+  components: {
+    Nav,
+    Footer
   },
-  data: function () {
+  head() {
     return {
-      config: {},
+      link: [
+        {
+          rel: "stylesheet",
+          href:
+            "https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@100;300;400&display=swap"
+        }
+      ],
+      title: this.config.site_title[0].text
+    };
+  },
+  data: function() {
+    return {
+      config: {}
     };
   },
   async fetch() {
@@ -31,15 +42,29 @@ export default {
     } catch (e) {
       error({ statsCode: 404, message: e });
     }
-  },
+  }
 };
 </script>
 
 <style>
+.body {
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  margin-bottom: 100px;
+}
+
+main#main {
+  margin-top: 50px;
+}
+
 .container {
   max-width: 700px;
   margin: auto;
-  margin-bottom: 200px;
+}
+
+.wide {
+  max-width: 900px;
+  margin: auto;
 }
 
 html {

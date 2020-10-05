@@ -1,6 +1,6 @@
 <template>
   <div
-    class="banner"
+    class="banner wide"
     :style="{
       backgroundImage: `url(${slice.primary.image.url})`
     }"
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "ImageCaption",
+  name: "Banner",
   props: {
     slice: Object
   }
@@ -20,8 +20,7 @@ export default {
 
 <style scoped>
 .banner {
-  /* Add media query */
-  max-width: 95vw;
+  /* Background */
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
@@ -31,16 +30,17 @@ export default {
   font-size: 2em;
   color: black;
   font-family: Gotu, serif;
-  padding-right: 20px;
-  margin: 20px;
-  padding: 20px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding-right: 250px;
 }
 
-@media (min-width: 900px) {
+@media screen and (max-width: 700px) {
   .banner {
-    margin: 70px 0px 70px calc(-10%);
-    width: 120%;
-    padding-right: 200px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 1.7em;
+    background-clip: border-box;
   }
 }
 </style>

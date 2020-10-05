@@ -1,5 +1,5 @@
 <template>
-  <div class="image-row">
+  <div class="image-row container">
     <template v-for="image in slice.items">
       <div class="ratio" :key="image.image.url">
         <img :src="image.image.fixedHeight.url" />
@@ -12,8 +12,8 @@
 export default {
   name: "ImageRow",
   props: {
-    slice: Object,
-  },
+    slice: Object
+  }
 };
 </script>
 
@@ -21,7 +21,6 @@ export default {
 .image-row {
   display: flex;
   flex: 1 1 auto;
-  max-width: 100%;
 }
 
 img {
