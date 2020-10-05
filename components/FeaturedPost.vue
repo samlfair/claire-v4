@@ -15,9 +15,11 @@ export default {
   props: {
     item: Object
   },
-  data: function() {
+  data() {
     return {
       post: {
+        uid: "",
+        title: "",
         body: []
       }
     };

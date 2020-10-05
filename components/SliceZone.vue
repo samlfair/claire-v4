@@ -1,6 +1,6 @@
 <template>
   <div class="slice_zone">
-    <div v-for="slice in slices">
+    <div v-for="(slice, index) in slices" :key="`${slice.slice_type}-${index}`">
       <div v-if="slice.slice_type === 'image_with_caption'">
         <Banner :slice="slice" />
       </div>
