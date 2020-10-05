@@ -1,8 +1,6 @@
 <template>
   <div class="body">
-    <!-- <Nav :config="config" /> -->
-    <nuxt-link to="/">home</nuxt-link
-    ><nuxt-link to="/portfolio">portfolio</nuxt-link>
+    <Nav :config="config" />
     <main id="main">
       <Nuxt />
     </main>
