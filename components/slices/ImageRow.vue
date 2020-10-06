@@ -2,7 +2,7 @@
   <div class="image-row container">
     <template v-for="image in slice.items">
       <div class="ratio" :key="image.image.url">
-        <img :src="image.image.fixedHeight.url" />
+        <img :src="image.image.tall.url" />
       </div>
     </template>
   </div>
