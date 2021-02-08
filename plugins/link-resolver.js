@@ -3,9 +3,6 @@
  */
 
 export default function(doc) {
-  if (doc.link_type === "Web") {
-    return doc.url;
-  }
   if (doc.isBroken) {
     return "/not-found";
   }

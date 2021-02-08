@@ -11,9 +11,13 @@
   "dependencies": {
     "@nuxt/http": "^0.6.2",
     "@nuxtjs/prismic": "^1.2.3",
+<<<<<<< HEAD
     "nuxt": "^2.14.0",
     "nuxt-blurhash": "0.0.6",
     "vue-blurhash": "^0.1.4"
+=======
+    "nuxt": "^2.14.6"
+>>>>>>> 764696a8c2e998075c204134314f366c0a23bd0d
   },
   "devDependencies": {}
 }

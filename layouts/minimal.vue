@@ -1,23 +1,14 @@
 <template>
   <div class="body">
-    <Nav :config="config" />
     <main id="main">
       <Nuxt />
     </main>
-    <Footer />
   </div>
 </template>
 
 <script>
-import Nav from "~/components/Nav";
-import Footer from "~/components/Footer";
-
 export default {
   name: "Layout",
-  components: {
-    Nav,
-    Footer
-  },
   head() {
     return {
       link: [

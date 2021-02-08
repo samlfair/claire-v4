@@ -1,8 +1,8 @@
 <template>
   <div class="slice_zone">
-    <div v-for="slice in slices">
+    <div v-for="(slice, index) in slices" :key="`${slice.slice_type}-${index}`">
       <div v-if="slice.slice_type === 'image_with_caption'">
-        <ImageCaption :slice="slice" />
+        <Banner :slice="slice" />
       </div>
       <div v-if="slice.slice_type === 'text'">
         <RichText :slice="slice" />
@@ -10,14 +10,18 @@
       <div v-if="slice.slice_type === 'image_row'">
         <ImageRow :slice="slice" />
       </div>
+      <div v-if="slice.slice_type === 'embed'">
+        <Embed :slice="slice" />
+      </div>
+      <div v-if="slice.slice_type === 'featured'">
+        <Featured :slice="slice" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import RichText from "./slices/RichText";
-import ImageCaption from "./slices/ImageCaption";
-import ImageRow from "./slices/ImageRow";
+import { Banner, Embed, Featured, ImageRow, RichText } from "./slices";
 
 export default {
   name: "SliceZone",
