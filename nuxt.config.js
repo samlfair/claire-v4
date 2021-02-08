@@ -49,20 +49,8 @@ export default {
    */
   modules: [
     "@nuxtjs/prismic",
-    [
-      "@nuxtjs/prismic",
-      {
-        endpoint: "",
-        apiOptions: {
-          routes: [
-            {
-              type: "page",
-              path: "/:uid"
-            }
-          ]
-        }
-      }
-    ]
+    'nuxt-blurhash',
+    '@nuxt/http'
   ],
   prismic: {
     endpoint: "https://claire.cdn.prismic.io/api/v2",
