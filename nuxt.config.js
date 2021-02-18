@@ -47,16 +47,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-<<<<<<< HEAD
-  modules: [
-    "@nuxtjs/prismic",
-    'nuxt-blurhash',
-    '@nuxt/http'
-  ],
-=======
-  modules: [],
-
->>>>>>> 764696a8c2e998075c204134314f366c0a23bd0d
+  modules: ["@nuxtjs/prismic", "@nuxt/http"],
   prismic: {
     endpoint: "https://claire.cdn.prismic.io/api/v2",
     linkResolver: "@/plugins/link-resolver",

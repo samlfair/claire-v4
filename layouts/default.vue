@@ -1,6 +1,6 @@
 <template>
   <div class="body">
-    <Nav :config="config" />
+    <Nav v-if="config" :config="config" />
     <main id="main">
       <Nuxt />
     </main>
@@ -32,49 +32,16 @@ export default {
   },
   data() {
     return {
-      config: {
-        title: [{ type: "heading1", text: "Config 🗜", spans: [] }],
-        site_title: [{ type: "heading1", text: "Claire Ciel", spans: [] }],
-        nav_menu: [
-          {
-            menu_item_label: [{ type: "heading4", text: "Photos", spans: [] }],
-            menu_item_link: {
-              id: "Xz9zRBIAABMgKA3V",
-              type: "photo_page",
-              tags: [],
-              slug: "photography",
-              lang: "en-us",
-              uid: "photos",
-              link_type: "Document",
-              isBroken: false
-            }
-          },
-          {
-            menu_item_label: [
-              { type: "heading4", text: "Portfolio", spans: [] }
-            ],
-            menu_item_link: {
-              id: "X2ecJBIAAGzBjjO2",
-              type: "page",
-              tags: [],
-              slug: "portfolio",
-              lang: "en-us",
-              uid: "portfolio",
-              link_type: "Document",
-              isBroken: false
-            }
-          }
-        ]
-      }
+      config: null
     };
+  },
+  async fetch() {
+    try {
+      this.config = (await this.$prismic.api.getSingle("config")).data;
+    } catch (e) {
+      error({ statsCode: 404, message: e });
+    }
   }
-  // async fetch() {
-  //   try {
-  //     this.config = (await this.$prismic.api.getSingle("config")).data;
-  //   } catch (e) {
-  //     error({ statsCode: 404, message: e });
-  //   }
-  // }
 };
 </script>
 
@@ -90,12 +57,12 @@ main#main {
 }
 
 .container {
-  max-width: 700px;
+  max-width: 800px;
   margin: auto;
 }
 
 .wide {
-  max-width: 900px;
+  max-width: 800px;
   margin: auto;
 }
 

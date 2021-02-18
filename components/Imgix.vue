@@ -1,14 +1,6 @@
 <template>
   <div ref="image">
     <img :style="{ width: '100%' }" :src="root + `?w=` + width" alt="" />
-    <!-- <nuxt-blur-image
-      v-if="blur && width"
-      :width="width"
-      :height="(width * image.dimensions.height) / image.dimensions.width"
-      :hash="blur"
-      :alt="image.alt"
-      :src="root + `?w=` + width"
-    /> -->
   </div>
 </template>
 
@@ -16,12 +8,12 @@
 export default {
   name: "Imgix",
   props: {
-    image: Object,
+    image: Object
   },
   data() {
     return {
       blur: null,
-      width: null,
+      width: null
     };
   },
   computed: {
@@ -30,7 +22,7 @@ export default {
     },
     blurUrl() {
       return `${this.root}?fm=blurhash`;
-    },
+    }
   },
   async fetch() {
     this.blur = await this.$http.$get(`${this.root}?fm=blurhash`);
@@ -41,7 +33,7 @@ export default {
   methods: {
     getWidth() {
       this.width = this.$refs["image"].offsetWidth;
-    },
-  },
+    }
+  }
 };
 </script>

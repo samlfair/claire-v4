@@ -12,7 +12,6 @@
     "@nuxt/http": "^0.6.2",
     "@nuxtjs/prismic": "^1.2.3",
     "nuxt": "^2.14.0",
-    "nuxt-blurhash": "0.0.6",
     "vue-blurhash": "^0.1.4"
   },
   "devDependencies": {}
