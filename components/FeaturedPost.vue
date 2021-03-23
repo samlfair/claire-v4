@@ -76,6 +76,7 @@ a {
   background: #ccc;
   padding-top: 100%;
   background-size: cover;
+  background-position: center center;
 }
 
 .text {
