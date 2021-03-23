@@ -62,7 +62,7 @@ main#main {
 }
 
 .wide {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
 }
 
