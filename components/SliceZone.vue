@@ -27,6 +27,13 @@ export default {
   name: "SliceZone",
   props: {
     slices: Array
+  },
+  components: {
+    Banner,
+    Embed,
+    Featured,
+    ImageRow,
+    RichText
   }
 };
 </script>
