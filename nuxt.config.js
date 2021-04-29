@@ -1,7 +1,5 @@
 export default {
-  mode: "universal",
-  ssr: false,
-  target: "server",
+  target: "static",
 
   head: {
     title: process.env.npm_package_name || "",
@@ -42,6 +40,10 @@ export default {
     endpoint: "https://claire.cdn.prismic.io/api/v2",
     linkResolver: "@/plugins/link-resolver",
     htmlSerializer: "@/plugins/html-serializer"
+  },
+
+  generate: {
+    routes: ["/art-portfolio"]
   },
   /*
    ** Build configuration
