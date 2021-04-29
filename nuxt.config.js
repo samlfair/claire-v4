@@ -1,18 +1,8 @@
 export default {
-  /*
-   ** Nuxt rendering mode
-   ** See https://nuxtjs.org/api/configuration-mode
-   */
-  mode: "spa",
-  /*
-   ** Nuxt target
-   ** See https://nuxtjs.org/api/configuration-target
-   */
-  // target: "server",
-  /*
-   ** Headers of the page
-   ** See https://nuxtjs.org/api/configuration-head
-   */
+  mode: "universal",
+  ssr: false,
+  target: "server",
+
   head: {
     title: process.env.npm_package_name || "",
     meta: [
