@@ -43,7 +43,7 @@ export default {
   },
 
   generate: {
-    // routes: ["/art-portfolio"]
+    routes: ["/art-portfolio"]
   },
   /*
    ** Build configuration
