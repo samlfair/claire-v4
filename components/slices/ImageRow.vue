@@ -1,38 +1,56 @@
 <template>
-  <div class="image-row container">
-    <template v-for="image in slice.items">
-      <div class="ratio" :key="image.image.url">
-        <img :src="image.image.fixedHeight.url" />
+  <div class="slice-image-row wide">
+    <div class="image-row" :style="{ gap: `10px`, marginBottom: `7px` }">
+      <div
+        v-for="(item, i) in slice.items"
+        class="image"
+        :key="`slice-item-${i}`"
+        :style="{
+          aspectRatio:
+            item.image.dimensions.width / item.image.dimensions.height,
+          flex: item.image.dimensions.width / item.image.dimensions.height
+        }"
+      >
+        <Imgix
+          :alt="item.image.alt"
+          :width="item.image.dimensions.width"
+          :height="item.image.dimensions.height"
+          :imageUrl="item.image.url"
+        />
       </div>
-    </template>
+    </div>
+    <prismic-rich-text
+      v-if="$prismic.asText(slice.primary.caption)"
+      class="slice-image-row-caption"
+      :field="slice.primary.caption"
+    />
   </div>
 </template>
 
 <script>
+import Imgix from "./../Imgix2";
+
 export default {
   name: "ImageRow",
   props: {
-    slice: Object
+    slice: {
+      type: Object,
+      required: true,
+      default() {
+        return {};
+      }
+    }
+  },
+  components: {
+    Imgix
   }
 };
 </script>
 
 <style scoped>
 .image-row {
+  width: 100%;
   display: flex;
   flex: 1 1 auto;
-}
-
-img {
-  max-width: 100%;
-}
-
-.ratio {
-  margin-left: 3px;
-  /* overflow: hidden; */
-}
-
-.ratio:first-child {
-  margin-left: 0;
 }
 </style>
