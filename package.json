@@ -1,18 +1,17 @@
 {
-  "name": "claireciel",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
-  },
-  "dependencies": {
-    "@nuxt/http": "^0.6.2",
-    "@nuxtjs/prismic": "^1.2.3",
-    "nuxt": "^2.15.3",
-    "vue-blurhash": "^0.1.4"
-  },
-  "devDependencies": {}
+	"name": "claire",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "svelte-kit dev",
+		"build": "svelte-kit build",
+		"package": "svelte-kit package",
+		"preview": "svelte-kit preview",
+		"prepare": "svelte-kit sync"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"svelte": "^3.44.0"
+	},
+	"type": "module"
 }
