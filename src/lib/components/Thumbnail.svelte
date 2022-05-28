@@ -26,7 +26,7 @@
     margin: -1rem;
     padding: 1rem;
     display: flex;
-    transition: all 0.6s;
+    transition: box-shadow 0.6s, transform 0.6s;
   }
   
   .padding.reverse {
