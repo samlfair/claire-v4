@@ -1,0 +1,42 @@
+<script>
+  import Header from "$lib/components/Header.svelte"
+  import Nav from "$lib/components/Nav.svelte"
+  import Footer from "../lib/components/Footer.svelte";
+</script>
+
+<Header />
+<Nav />
+<main>
+  <slot />
+</main>
+<Footer />
+
+<style>
+  :global(body) {
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  :global(:root) {
+    --gold: #E7A85D;
+    --lightblue: #D6EAEA;
+    --blue: #52A3A3;
+  }
+
+    
+  :global(h2) {
+    font-family: "Americana";
+    font-size: 2rem;
+  }
+
+  :global(p, li) {
+    font-family: "Sweet Sans Pro";
+    margin: 0;
+  }
+
+  :global(.bound) {
+    width: 100%;
+    max-width: min(calc(100vw - 5rem), 800px);
+    margin: auto;
+  }
+</style>
