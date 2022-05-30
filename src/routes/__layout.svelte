@@ -24,14 +24,13 @@
   }
 
     
-  :global(h2) {
+  :global(h2, h3) {
     font-family: "Americana";
     font-size: 2rem;
   }
 
   :global(p, li) {
     font-family: "Sweet Sans Pro";
-    margin: 0;
   }
 
   :global(.bound) {
