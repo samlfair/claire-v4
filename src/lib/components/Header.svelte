@@ -1,10 +1,12 @@
 <script>
     import logo from "./logo.png"
+
+    export let subtitle, site_title
 </script>
 
 <header class="bound">
-  <img src={logo} alt="Claire Littlefair Logo">
-  <p>Jewellery Designer & Metalsmith</p>
+  <img src={logo} alt="{site_title} Logo">
+  <p>{subtitle}</p>
 </header>
 
 <style>

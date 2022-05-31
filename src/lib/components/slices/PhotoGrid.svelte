@@ -1,10 +1,9 @@
 <script>
   import * as prismicH from "@prismicio/helpers"
-  export let num = 6
   export let slice
 </script>
 
-<section>
+<section style="background: {slice.primary.slice_theme?.data?.color}">
   <div class="grid bound">
     {#each slice.items as item}
     {@const imageSrc = prismicH.asImageWidthSrcSet(item.image)}
@@ -19,11 +18,11 @@
   </div>
 </section>
 
-<style>
+<style> 
   section {
-    background: var(--lightblue);
+    margin: 3rem 0;
   }
-  
+
   .grid {
     padding: 2rem 0;
     display: flex;

@@ -1,16 +1,30 @@
-<nav>
-  <li>Contact</li>
-  <li>About</li>
-  <li>Commissions</li>
+<script>
+  import {colord} from "colord"
+
+  export let config_theme, menu
+
+  console.log(config_theme.data.color)
+
+  const color = colord(config_theme?.data?.color).darken(0.5).toHex()
+</script>
+
+<nav style:color>
+  <ul class="bound">
+    {#each menu as item}
+      <li>{item.label}</li>
+    {/each}
+  </ul>
 </nav>
 
 <style>
-  nav {
+  ul {
+    margin: 0 auto 2rem;
+    padding: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     list-style: none;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
     background: white;
     position: sticky;
     top: 0px;
