@@ -1,7 +1,8 @@
-import * as prismic from '@prismicio/client'
+import { createClient } from '$lib/prismicio'
 
-export async function get({}) {
-  const client = prismic.createClient('claire')
+export async function get({ request }) {
+  const client = createClient({ request })
+
   const document = await client.getByUID('page-2', 'homepage')
 
   if (document) {

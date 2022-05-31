@@ -2,7 +2,12 @@
   import Header from "$lib/components/Header.svelte"
   import Nav from "$lib/components/Nav.svelte"
   import Footer from "../lib/components/Footer.svelte";
+  import { repositoryName } from "$lib/prismicio"
 </script>
+
+<svelte:head>
+  <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo={repositoryName}"></script>
+</svelte:head>
 
 <Header />
 <Nav />
