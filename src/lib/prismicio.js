@@ -1,7 +1,7 @@
 import * as prismic from '@prismicio/client'
 
 // Repository name
-export const repositoryName = 'claire'
+export const repositoryName = 'clairelittlefair'
 
 export const createClient = ({ request, fetch } = {}) => {
   const client = prismic.createClient(repositoryName, { fetch })
