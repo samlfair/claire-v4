@@ -18,5 +18,9 @@ export const createClient = ({ request, fetch } = {}) => {
 }
 
 export const linkResolver = (doc) => {
+  if (doc.type === 'page') {
+    if (doc.uid === 'homepage') return '/'
+    return '/' + doc.uid
+  }
   return '/'
 }
