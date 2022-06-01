@@ -11,7 +11,9 @@
 <nav style:color>
   <ul class="bound">
     {#each menu as item}
-      <li><a href={prismicH.asLink(item.link, linkResolver)}>{item.label}</a></li>
+      <a href={prismicH.asLink(item.link, linkResolver)}>
+        <li>{item.label}</li>
+      </a>
     {/each}
   </ul>
 </nav>

@@ -1,5 +1,6 @@
 <script>
   import * as prismicH from "@prismicio/helpers"
+  import { linkResolver } from "$lib/prismicio"
 
   export let slice
 </script>
@@ -9,7 +10,7 @@
   {@const imageSrc = prismicH.asImageWidthSrcSet(item.image)}
   <section class="bound">
     <article>
-      <a class="padding" href={prismicH.asLink(item.link)} class:reverse>
+      <a class="padding" href={prismicH.asLink(item.link, linkResolver)} class:reverse>
         <div class="image">
           <img 
             src={imageSrc.src}
