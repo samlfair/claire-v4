@@ -3,8 +3,6 @@
 
   export let config_theme, menu
 
-  console.log(config_theme.data.color)
-
   const color = colord(config_theme?.data?.color).darken(0.5).toHex()
 </script>
 
@@ -24,7 +22,6 @@
     justify-content: space-between;
     flex-wrap: wrap;
     list-style: none;
-    /* margin-bottom: 2rem; */
     background: white;
     position: sticky;
     top: 0px;
@@ -32,7 +29,6 @@
     font-family: "Sweet Sans Pro";
     font-size: 0.8em;
     text-transform: uppercase;
-    color: var(--blue);
     z-index: 2;
   }
 
