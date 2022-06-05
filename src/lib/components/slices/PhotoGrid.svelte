@@ -1,6 +1,6 @@
 <script>
   import * as prismicH from "@prismicio/helpers"
-  import linkResolver from "$lib/prismicio"
+  import { linkResolver } from "$lib/prismicio"
   export let slice
 </script>
 

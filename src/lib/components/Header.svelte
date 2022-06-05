@@ -20,6 +20,7 @@
 
   header p {
     font-size: clamp(1rem,3vw,1.3rem);
+    font-weight: lighter;
     letter-spacing: 1px;
   }
 
